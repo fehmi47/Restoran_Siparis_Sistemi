@@ -81,6 +81,7 @@ public class OdemeService {
         return toplam;
     }
 
+
     private void odemeleriKaydet() {
         DosyaIslemleri.veriyiKaydet(ODEME_DOSYASI, odemeListesi);
     }

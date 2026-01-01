@@ -46,10 +46,17 @@ public class MenuService {
     }
 
     public void yemekGuncelle(int id,String ad,double fiyat, YemekKategori kategori){
-        Menu menu = idIleYemekBul(id);
-        menu.setAd(ad);
-        menu.setFiyat(fiyat);
-        menu.setKategori(kategori);
+    Menu menu = idIleYemekBul(id);
+
+        if (menu != null) {
+            menu.setAd(ad);
+            menu.setFiyat(fiyat);
+            menu.setKategori(kategori);
+            menuyuKaydet(); 
+            System.out.println("Yemek başarıyla güncellendi.");
+        } else {
+            System.out.println("Hata: " + id + " numaralı yemek bulunamadı!");
+        }
     }
 
     public boolean yemekSil(int id) {

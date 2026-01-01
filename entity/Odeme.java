@@ -8,7 +8,7 @@ public class Odeme implements Serializable {
     private static final long serialVersionUID = 5L;
 
     private int id;
-    private int siparisId; // Hangi siparişin ödemesi olduğu (Foreign Key mantığı)
+    private int siparisId; 
     private double tutar;
     private OdemeYontemi odemeYontemi;
     private LocalDate islemTarihi;
@@ -18,10 +18,10 @@ public class Odeme implements Serializable {
         this.siparisId = siparisId;
         this.tutar = tutar;
         this.odemeYontemi = odemeYontemi;
-        this.islemTarihi = LocalDate.now(); // Nesne oluştuğu anın tarihi
+        this.islemTarihi = LocalDate.now(); 
     }
 
-    // Getter ve Setter'lar...
+    
     public int getId() { return id; }
     public int getSiparisId() { return siparisId; }
     public double getTutar() { return tutar; }

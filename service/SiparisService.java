@@ -27,8 +27,10 @@ public class SiparisService {
         this.aktifSiparislerMap = new HashMap<>();
         List<Siparis> dosyadakiListe = DosyaIslemleri.verileriOku(AKTIF_SIPARISLER_DOSYASI);
         
-        for (Siparis siparis : dosyadakiListe) {
-            this.aktifSiparislerMap.put(siparis.getMasaNo(), siparis);
+        if (dosyadakiListe != null) {
+            for (Siparis siparis : dosyadakiListe) {
+                this.aktifSiparislerMap.put(siparis.getMasaNo(), siparis);
+            }
         }
 
         this.gecmisSiparislerListesi = DosyaIslemleri.verileriOku(GECMIS_SIPARISLER_DOSYASI);

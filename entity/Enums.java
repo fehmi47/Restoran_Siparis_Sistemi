@@ -24,7 +24,7 @@ public class Enums {
     }
 
     public enum OdemeYontemi{
-        NAKİT,
+        NAKIT,
         KART
     }
 
